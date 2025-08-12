@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VARVI · AirPods y Accesorios</title>
+  <meta name="description" content="Catálogo VARVI: AirPods, Apple Watch  y accesorios de carga." />
+  <style>
+    /* ===== Diseño blanco minimal ===== */
+    :root{
+      --bg:#ffffff;       /* fondo blanco */
+      --ink:#0a0a0a;      /* texto principal */
+      --muted:#6b6b6b;    /* texto secundario */
+      --line:#eaeaea;     /* bordes sutiles */
+      --card:#fafafa;     /* tarjetas */
+      --accent:#1677ff;   /* azul tipo burbuja */
+      --price:#111111;    /* precio */
+      --radius:16px;      
+      --gap: clamp(12px, 2vw, 20px);
+      --shadow: 0 8px 24px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font: 400 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; color:var(--ink); background:var(--bg)}
+    a{color:inherit; text-decoration:none}
+
+    /* ===== Contenedor y Header ===== */
+    .container{width:min(1100px, 92vw); margin-inline:auto}
+    header{position:sticky; top:0; background:rgba(255,255,255,.85); backdrop-filter: blur(6px); border-bottom:1px solid var(--line);}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+
+    .brand-wrap{display:flex; align-items:center; gap:12px}
+    .brand-logo{height:56px; width:auto; display:block; /* Se espera un PNG blanco con fondo transparente */}
+    .brand-tile{display:grid; place-items:center; border:1px solid var(--line); border-radius:12px; padding:6px 10px; background:white}
+    .brand-title{margin:0; letter-spacing:.12em; font-size:14px}
+
+   .btn{padding:10px 14px; border-radius:999px; border:1px solid var(--line); background:#00b44b}
+    .btn.whats{ color:#25D366; }
+    .mini{font-size:12px; color:var(--muted)}
+
+
+    /* ===== Hero con burbujas ===== */
+    .hero{padding:46px 0 22px; text-align:center}
+    .bubbles{display:grid; gap:12px; justify-items:center; margin:8px auto}
+    .bubble{max-width:min(720px, 92vw); color:#fff; background:var(--accent); border-radius:20px; padding:16px 22px; font-weight:800; font-size:clamp(22px, 5vw, 44px); line-height:1.05; letter-spacing:.02em; position:relative}
+    .bubble:after{content:''; position:absolute; left:38%; bottom:-10px; width:22px; height:22px; background:var(--accent); border-radius:0 0 18px 0; transform:skewY(25deg)}
+
+    /* ===== Grid de productos ===== */
+    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); margin: 24px 0 60px}
+    .card{grid-column: span 12; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column}
+    .card .media{aspect-ratio: 16/9; background:#fff; display:grid; place-items:center}
+    .card .media img{width:80%; height:auto; object-fit:contain}
+    .card .body{padding:18px}
+    .title{font-size:18px; font-weight:600; margin:0}
+    .subtitle{margin:6px 0 12px; color:var(--muted)}
+    .price-row{display:flex; align-items:center; justify-content:space-between}
+    .price{font-size:20px; font-weight:800; color:var(--price)}
+    .buy{padding:10px 14px; border-radius:10px; border:1px solid var(--line); background:#fff}
+
+    @media (min-width:680px){ .card{grid-column: span 6} }
+    @media (min-width:980px){ .card{grid-column: span 4} }
+
+    /* ===== Footer ===== */
+    footer{border-top:1px solid var(--line); padding:24px 0 40px; color:var(--muted)}
+    .foot{display:flex; gap:16px; flex-wrap:wrap; align-items:center; justify-content:space-between}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand-wrap">
+        <!-- Coloca aquí tu logo VARVI en blanco SIN número (PNG con fondo transparente) -->
+        <div class="brand-tile">
+          <img class="brand-logo" src="logo_varvi_blanco.png" alt="VARVI" />
+        </div>
+        <p class="brand-title">VARVI</p>
+      </div>
+      <div class="cta">
+        <span class="mini">MIII GENTEEEE MAYORISTA 🗣️🔥</span>
+        <a class="btn" href="https://wa.me/9934029469" target="_blank" rel="noopener" aria-label="WhatsApp VARVI">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-label="Mensajes de promoción">
+      <div class="bubbles">
+        <div class="bubble">MIII GENTE</div>
+        <div class="bubble">PRECIOS ELEGANTES</div>
+        <div class="bubble">PARA CLIENTES SUPER ELEGANTES</div>
+      </div>
+      <p class="mini">AirPods, Apple Watch y accesorios.</p>
+    </section>
+
+    <!-- ===== Listado de productos ===== -->
+    <section class="grid" aria-label="Productos VARVI">
+      <!-- AirPods Pro 2 con ANC -->
+      <article class="card">
+        <div class="media">
+          <img src="airpods-pro-2-anc.jpeg" alt="AirPods Pro 2ª generación con cancelación de ruido" />
+        </div>
+        <div class="body">
+          <h3 class="title">AirPods Pro (2ª generación) — Cancelación Activa de Ruido</h3>
+          <p class="subtitle">Audio envolvente y ajuste cómodo.</p>
+          <div class="price-row"><span class="price">$350</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20AirPods%20Pro%202%20con%20ANC%20%24500">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- AirPods Pro 2 sin ANC -->
+      <article class="card">
+        <div class="media">
+          <img src="airpods-pro-2-anc.jpeg" alt="AirPods Pro 2ª generación sin cancelación de ruido" />
+        </div>
+        <div class="body">
+          <h3 class="title">AirPods Pro (2ª generación) — Sin Cancelación de Ruido</h3>
+          <p class="subtitle">Controles táctiles y gran autonomía.</p>
+          <div class="price-row"><span class="price">$300</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20AirPods%20Pro%202%20sin%20ANC%20%24300">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- AirPods 4 con ANC -->
+      <article class="card">
+        <div class="media">
+          <img src="airpods-4-anc.jpeg" alt="AirPods 4ª generación con cancelación de ruido" />
+        </div>
+        <div class="body">
+          <h3 class="title">AirPods (4ª generación) — Cancelación Activa de Ruido</h3>
+          <p class="subtitle">Sonido nítido en un diseño ligero.</p>
+          <div class="price-row"><span class="price">$300</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20AirPods%204%20con%20ANC%20%24500">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- AirPods 4 sin ANC -->
+      <article class="card">
+        <div class="media">
+          <img src="airpods-4-anc.jpeg" alt="AirPods 4ª generación sin cancelación de ruido" />
+        </div>
+        <div class="body">
+          <h3 class="title">AirPods (4ª generación) — Sin Cancelación de Ruido</h3>
+          <p class="subtitle">Estuche compacto. Confort diario.</p>
+          <div class="price-row"><span class="price">$280</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20AirPods%204%20sin%20ANC%20%24400">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- AirPods 3 -->
+      <article class="card">
+        <div class="media">
+          <img src="airpods-3.jpg" alt="AirPods 3ª generación" />
+        </div>
+        <div class="body">
+          <h3 class="title">AirPods (3ª generación)</h3>
+          <p class="subtitle">Audio espacial y resistencia al agua.</p>
+          <div class="price-row"><span class="price">$200</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20AirPods%203%20%24300">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- AirPods 1 -->
+      <article class="card">
+        <div class="media">
+          <img src="airpods-1.jpg" alt="AirPods 1ª generación" />
+        </div>
+        <div class="body">
+          <h3 class="title">AirPods (1ª generación)</h3>
+          <p class="subtitle">Clásicos, confiables y ligeros.</p>
+          <div class="price-row"><span class="price">$180</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20AirPods%201%20%24250">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- Apple Watch Ultra 2 -->
+      <article class="card">
+        <div class="media">
+          <img src="watch-ultra-2.jpg" alt="Apple Watch Ultra 2" />
+        </div>
+        <div class="body">
+          <h3 class="title">Apple Watch Ultra 2</h3>
+          <p class="subtitle">Caja de titanio y batería para todo el día.</p>
+          <div class="price-row"><span class="price">$600</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20Apple%20Watch%20Ultra%202%20%24900">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- Cargadores -->
+      <article class="card">
+        <div class="media">
+          <img src="charger-20w-35w.jpg" alt="Cargadores cubo 20W y 35W" />
+        </div>
+        <div class="body">
+          <h3 class="title">Cargadores (cubo 20W / 35W)</h3>
+          <p class="subtitle">Compactos y potentes.</p>
+          <div class="price-row"><span class="price">$60</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20Cargadores%2020W%2035W%20%24200">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- Cables -->
+      <article class="card">
+        <div class="media">
+          <img src="cable-usbc.jpg" alt="Cables 1m/2m USB-C a Lightning o USB-C a USB-C" />
+        </div>
+        <div class="body">
+          <h3 class="title">Cables de carga (1m/2m)</h3>
+          <p class="subtitle">USB‑C a Lightning o USB‑C a USB‑C.</p>
+          <div class="price-row"><span class="price">$50</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20Cables%201m%20o%202m%20%24100">Comprar</a></div>
+        </div>
+      </article>
+
+      <!-- MagSafe -->
+      <article class="card">
+        <div class="media">
+          <img src="magsafe.jpg" alt="Cargador MagSafe para iPhone o compatibles" />
+        </div>
+        <div class="body">
+          <h3 class="title">Cargador MagSafe</h3>
+          <p class="subtitle">Para iPhone o modelos compatibles.</p>
+          <div class="price-row"><span class="price">$80</span><a class="buy" href="https://wa.me/9934029469?text=Quiero%20Cargador%20MagSafe%20%24100">Comprar</a></div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <p>© VARVI. Catálogo de muestra.</p>
+      <p>Contacto: <a href="https://wa.me/9934029469" target="_blank" rel="noopener">9934029469 </a></p>
+    </div>
+  </footer>
+</body>
+</html>
